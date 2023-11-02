@@ -20,10 +20,10 @@ gap: 4px;
 export const  SideBar = () => {
   return (
     <SideBarStyle>
-      <img src={sidebar1} width={50} height={50} style={{cursor: 'pointer'}}/>
-      <img src={sidebar2} width={40} height={40} style={{cursor: 'pointer'}}/>
-      <img src={sidebar3} width={40} height={40} style={{cursor: 'pointer'}}/>
-      <img src={sidebar4} width={40} height={40} style={{cursor: 'pointer'}}/>
+      <img src={sidebar1} alt='side1' width={50} height={50} style={{cursor: 'pointer'}}/>
+      <img src={sidebar2} alt= 'side2' width={40} height={40} style={{cursor: 'pointer'}}/>
+      <img src={sidebar3} alt='side3' width={40} height={40} style={{cursor: 'pointer'}}/>
+      <img src={sidebar4} alt='side4' width={40} height={40} style={{cursor: 'pointer'}}/>
     </SideBarStyle>
   )
 }
