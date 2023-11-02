@@ -1,17 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { SmallButton } from './Buttons'
-import {useQuery} from 'react-query'
+import { useQuery } from 'react-query'
 import { fetchTransaction, fetchWallet } from '../utils/api'
-
 
 import {
   LineChart,
   Line,
   XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
   Legend
 } from 'recharts'
 import { Ledger } from './Ledger'
@@ -48,26 +44,35 @@ interface DashboardProps {
   openModal?: () => void
 }
 export const Dashboard: React.FC<DashboardProps> = ({ openModal }) => {
-  const {  data: wallet, isLoading: walletLoading, isError:walletError } = useQuery('wallet', fetchWallet);
-  const {  data: transactions, isLoading, isError } : any = useQuery('transaction', fetchTransaction);
+  const {
+    data: wallet,
+    isLoading: walletLoading,
+    isError: walletError
+  } = useQuery('wallet', fetchWallet)
+  const {
+    data: transactions,
+    isLoading,
+    isError
+  }: any = useQuery('transaction', fetchTransaction)
 
   if (walletLoading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
 
   if (walletError) {
-    return <div>Error fetching data</div>;
+    return <div>Error fetching data</div>
   }
-
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>
   }
   if (isError) {
-    return <div>Error fetching data</div>;
+    return <div>Error fetching data</div>
   }
-  const data = transactions.map((item: any)=> ({y: item.amount, x: item.date}))
-  console.log(data)
+  const data = transactions.map((item: any) => ({
+    y: item.amount,
+    x: item.date
+  }))
   return (
     <DashboardStyle>
       <SectionStyle>
@@ -87,7 +92,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ openModal }) => {
             <Line type='monotone' dataKey='y' stroke='#FF5403' />
           </LineChart>
         </div>
-        <Ledger data={wallet}/>
+        <Ledger data={wallet} />
       </SectionStyle>
 
       <Transaction transactions={transactions} openModal={openModal} />

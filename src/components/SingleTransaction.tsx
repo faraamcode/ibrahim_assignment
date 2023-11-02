@@ -27,12 +27,12 @@ export const SingleTransaction: React.FC<SingleTransactionProp> =({deposit, titl
     <SingleTransactionWrapper>
         <div style={{display: 'flex', gap: '10px', cursor: 'pointer'}}>
             <div style={{display: 'flex', width: '50px', height: '50px', borderRadius: '50%', background : deposit ? '#F9E3E0' : '#C4C4C4', alignItems: 'center', justifyContent :'center' }}>
-               <img src={deposit != 'deposit' ? redArrow : greenArrow } style={{width: '30%', height:'30%', objectFit: 'cover'}}/>
+               <img src={deposit !== 'deposit' ? redArrow : greenArrow }  alt="deposit" style={{width: '30%', height:'30%', objectFit: 'cover'}}/>
             </div>
             <div>
                 <ArrowWrapper></ArrowWrapper>
                 <h4>{title}</h4>
-                {description == "successful" ? <p style={{color: 'green'}}>{description}</p> :  description == "pending"  ? <p style={{color: 'red'}}>{description}</p> : <p>{description}</p>  }
+                {description ==="successful" ? <p style={{color: 'green'}}>{description}</p> :  description === "pending"  ? <p style={{color: 'red'}}>{description}</p> : <p>{description}</p>  }
             </div>
         </div>
         <div>

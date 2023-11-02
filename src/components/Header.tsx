@@ -73,17 +73,17 @@ export const  Header = () => {
     <HeaderStyled>
         <IconStyle width={30} height={30} src={logo} />
         <NavLinksStyle>
-            <NavLink text='home' Icon={<img src={home}/>}/>
-            <NavLink text='analytics' Icon={<img src={analytics}/>}/>
-            <SmallButton text='revenue' Icon={<img src={revenue}/>}/>
-            <NavLink text='CRM' Icon={<img src={group}/>}/>
-            <NavLink text='apps' Icon={<img src={menu}/>}/>
+            <NavLink text='home' Icon={<img alt='home' src={home}/>}/>
+            <NavLink text='analytics' Icon={<img  alt="analytics" src={analytics}/>}/>
+            <SmallButton text='revenue' Icon={<img src={revenue} alt='revenue'/>}/>
+            <NavLink text='CRM' Icon={<img src={group} alt='crm'/>}/>
+            <NavLink text='apps' Icon={<img src={menu} alt='apps'/>}/>
         </NavLinksStyle>
         <AppIconGroupStyle>
-          <img src={notification} style={{cursor: 'pointer'}}/>
-          <img src={message} style={{cursor: 'pointer'}}/>
+          <img src={notification} style={{cursor: 'pointer'}} alt='notification'/>
+          <img src={message} style={{cursor: 'pointer'}} alt='message'/>
           <ProfileStye>{data.first_name[0]+data.last_name[0]}</ProfileStye>
-          <img src={bars} style={{cursor: 'pointer'}}/>
+          <img src={bars} style={{cursor: 'pointer'}} alt='bars'/>
 
         </AppIconGroupStyle>
     </HeaderStyled>

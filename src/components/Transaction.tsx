@@ -1,11 +1,9 @@
 import React , {useContext} from 'react'
 import styled from 'styled-components'
 import download from '../assets/download.svg'
-import {useQuery} from 'react-query'
 import UserContext from '../utils/context'
 import arrow from '../assets/arrow.svg'
 import { SingleTransaction } from './SingleTransaction'
-import { fetchTransaction } from '../utils/api'
 
 interface TransactHeaderProps{
   total : number
@@ -79,11 +77,11 @@ const data = useContext(UserContext)
       <ButtonWrapper>
         <button onClick={()=> data?.openModal()}>
           Filter
-          <img src={arrow}/>
+          <img src={arrow} alt='open'/>
         </button>
         <button >
           Export list
-          <img src={download}/>
+          <img src={download} alt='close'/>
         </button>
       </ButtonWrapper>
 

@@ -50,7 +50,7 @@ export const SingleLedger: React.FC<LedgerProps> = ({title, amount})=>{
                 <p>{title}</p>
                 <h3>{amount}</h3>
             </div>
-            <img src={info} style={{alignSelf: 'flex-start'}}/>
+            <img src={info} style={{alignSelf: 'flex-start'}} alt='info'/>
         </LedgerStyle>
     )
 }
