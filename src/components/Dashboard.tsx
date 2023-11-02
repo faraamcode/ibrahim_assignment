@@ -26,7 +26,11 @@ const DashboardStyle = styled.div`
 const BalanceStyle = styled.div`
   max-width: 450px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  @media (min-width:990px) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
   p {
     font-size: 14px;
   }
@@ -37,7 +41,11 @@ const BalanceStyle = styled.div`
 
 const SectionStyle = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+   @media (min-width:990px) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 `
 
 interface DashboardProps {

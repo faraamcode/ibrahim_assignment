@@ -19,7 +19,7 @@ import { fetchUserData } from '../utils/api';
 
 
 const HeaderStyled = styled.header`
-  width: 98%;
+  width: 98vw;
   margin: 4px auto;
   height: 64px;
  border-radius: 100px;
@@ -39,11 +39,15 @@ min-width: 180px;
 gap: 5px;
 `
 const NavLinksStyle = styled.div`
-display:flex;
+display: none;
+
 height: 100%;
 width: 581px;
 justify-content: space-between;
 align-items: center;
+@media (min-width:990px) {
+    display: flex;
+  }
 `
 const ProfileStye = styled.div`
  width: 60px;
